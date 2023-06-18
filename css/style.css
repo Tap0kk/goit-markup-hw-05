@@ -476,12 +476,19 @@ img {
   border-radius: 4px;
   padding: 8px 0 8px 16px;
   background-color: transparent;
+  margin-right: 24px;
+  outline: none;
   font-size: 12px;
   line-height: calc(24 / 12);
   letter-spacing: 0.04em;
   color: #ffffff;
-  margin-right: 24px;
-  outline: none;
+}
+
+.subscribe-input::placeholder {
+  font-size: 12px;
+  line-height: calc(24 / 12);
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
 .subscribe-btn {
