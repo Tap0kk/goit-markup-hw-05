@@ -782,13 +782,13 @@ img {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  display: inline-flex;
   margin-right: 8px;
   align-items: center;
   justify-content: center;
   fill: transparent;
-  transition: background-color var(--transition) border var(--transition) fill
-    var(--transition);
+  display: inline-flex;
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
 }
 
 .modal-btn-send {
