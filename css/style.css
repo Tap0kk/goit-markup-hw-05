@@ -462,7 +462,7 @@ img {
 
 .subscribe-form {
   display: flex;
-  /* gap: 24px; */
+  gap: 24px;
 }
 
 .subscribe-title {
@@ -487,7 +487,6 @@ img {
   line-height: calc(24 / 12);
   letter-spacing: 0.04em;
   color: #ffffff;
-  margin-right: 24px;
 }
 
 .subscribe-input::placeholder {
