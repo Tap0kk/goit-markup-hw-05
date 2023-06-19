@@ -460,6 +460,11 @@ img {
   margin-left: 80px;
 }
 
+.subscribe-form {
+  display: flex;
+  /* gap: 24px; */
+}
+
 .subscribe-title {
   font-weight: 500;
   font-size: 16px;
@@ -471,27 +476,27 @@ img {
 
 .subscribe-input {
   width: 264px;
+  height: 40px;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding: 8px 0 8px 16px;
+  padding-left: 16px;
   background-color: transparent;
-  margin-right: 24px;
   outline: none;
   font-size: 12px;
   line-height: calc(24 / 12);
   letter-spacing: 0.04em;
   color: #ffffff;
+  margin-right: 24px;
 }
 
 .subscribe-input::placeholder {
-  font-size: 12px;
-  line-height: calc(24 / 12);
-  letter-spacing: 0.04em;
   color: #ffffff;
 }
 
 .subscribe-btn {
+  min-width: 165px;
+  height: 40px;
   background: var(--primary-brand);
   border-radius: 4px;
   border: none;
@@ -502,13 +507,14 @@ img {
   letter-spacing: 0.04em;
   color: #ffffff;
   padding: 8px 24px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .icon-send {
   fill: #ffffff;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 /* portfolo page */
 
@@ -685,17 +691,23 @@ img {
   flex-direction: column;
 }
 
-.modal-field {
+.modal-field:not(:nth-child(4), :nth-child(5)) {
   margin-bottom: 8px;
+}
+.modal-field:nth-child(4) {
+  margin-bottom: 16px;
+}
+.modal-field:nth-child(5) {
+  margin-bottom: 24px;
 }
 
 .modal-label {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--subtl-text);
   margin-bottom: 4px;
-  display: inline-block;
+  display: block;
 }
 .modal-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -705,7 +717,7 @@ img {
   width: 100%;
   height: 40px;
   outline: transparent;
-  transition: border-color var(--transition), fill var(--transition);
+  transition: border-color var(--transition);
 }
 
 .modal-input:is(:focus, :hover) {
@@ -715,6 +727,7 @@ img {
 .modal-input:is(:focus, :hover) + .input-icon {
   fill: var(--primary-brand);
 }
+
 .modal-textarea {
   height: 120px;
   width: 100%;
@@ -724,7 +737,11 @@ img {
   resize: none;
   padding: 8px 16px;
   outline: transparent;
-  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color var(--transition);
 }
 
 .modal-textarea::placeholder {
@@ -741,22 +758,21 @@ img {
 .modal-checkbox:checked + .privacy-policy span {
   background-color: var(--pressed-state);
   border: none;
-  fill: #ffffff;
+  fill: #f4f4fd;
 }
 
 .privacy-policy {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--subtl-text);
-  margin-bottom: 24px;
   display: flex;
   align-items: center;
 }
 
 .privacy-policy-link {
   font-size: 12px;
-  line-height: calc(16 / 12);
+  line-height: 1.17;
   letter-spacing: 0.04em;
   text-decoration-line: underline;
   color: var(--primary-brand);
@@ -767,12 +783,12 @@ img {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  display: flex;
+  display: inline-flex;
   margin-right: 8px;
   align-items: center;
   justify-content: center;
   fill: transparent;
-  transition: fill var(--transition), background-color var(--transition);
+  transition: background-color var(--transition);
 }
 
 .modal-btn-send {
@@ -786,11 +802,9 @@ img {
   text-align: center;
   letter-spacing: 0.04em;
   color: #ffffff;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   margin: 0 auto;
   cursor: pointer;
   transition: background-color var(--transition);
@@ -809,4 +823,5 @@ img {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill var(--transition);
 }
